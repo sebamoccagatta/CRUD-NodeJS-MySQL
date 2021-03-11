@@ -23,7 +23,7 @@
                                 <td> <%= data[i].addres %> </td>
                                 <td> <%= data[i].phone %> </td>
                                 <td>
-                                    <a href="/delete/<%= data[i].id %>" class="btn btn-danger"> Delete</a>
+                                    <a href="/delete/<%= data[i].id %>" onclick="javascript:return borrar();" class="btn btn-danger"> Delete</a>
                                     <a href="/update/<%= data[i].id %>" class="btn btn-info"> Update</a>
                                 </td>
                             </tr>
@@ -48,6 +48,7 @@
                         <button type="submit" class="btn btn-primary">
                             Save Customer
                         </button>
+                        
                     </form>
                 </div>
             </div>
@@ -56,3 +57,11 @@
 </div>
 
 <%- include('partials/_footer.ejs') %>
+
+<script>
+    function borrar ()
+      {
+          borrar = confirm("¿Seguro que desea Eliminar?");
+          return borrar;
+      }
+</script>
