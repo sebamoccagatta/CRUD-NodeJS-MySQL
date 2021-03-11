@@ -1,8 +1,11 @@
 <script>
     function borrar ()
       {
-          borrar = confirm("¿Seguro que desea Eliminar?");
-          return borrar;
+      borrar = confirm("¿Seguro que desea Eliminar?");
+        if (borrar == false) {
+            window.location.href = "/"
+        }
+        return borrar;
       }
 
       function actualizar ()
